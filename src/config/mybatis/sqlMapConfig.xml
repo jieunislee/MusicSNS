@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="vo.MusicVO" alias="music"/>
+		<typeAlias type="vo.MemberVO" alias="member"/>
+		<typeAlias type="vo.PlaylistVO" alias="playlist"/>
+		<typeAlias type="vo.CommentsVO" alias="comments"/>
+		<typeAlias type="vo.ApplyfriendVO" alias="applyfriend"/>
+		<typeAlias type="vo.MyfriendVO" alias="myfriend"/>
+		<typeAlias type="vo.MessageVO" alias="message"/>
+	</typeAliases>
+
+
+	<environments default="">
+		<environment id="">
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+				<property name="data_source" 
+				value="java:comp/env/jdbc/oracle_test" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<!-- 맵퍼를 준비해두면 나중에 쿼리문을 통해 자동으로 객체화 해 준다. -->
+		<mapper resource="config/mybatis/mapper/join.xml" />
+		<mapper resource="config/mybatis/mapper/music.xml" />
+		<mapper resource="config/mybatis/mapper/playlist.xml" />
+		<mapper resource="config/mybatis/mapper/comments.xml" />
+		<mapper resource="config/mybatis/mapper/applyfriend.xml" />
+		<mapper resource="config/mybatis/mapper/myfriend.xml" />
+		<mapper resource="config/mybatis/mapper/message.xml" />
+	</mappers>
+</configuration>
+
+
+
+
+
+
+
